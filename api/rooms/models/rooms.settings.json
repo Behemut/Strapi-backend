@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "name": "rooms",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "chats": {
+      "collection": "mensajes",
+      "via": "room"
+    },
+    "miembros": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "rooms",
+      "dominant": true
+    }
+  }
+}

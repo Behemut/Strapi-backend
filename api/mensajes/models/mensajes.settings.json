@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mensajes",
+  "info": {
+    "name": "mensajes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "from": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "to": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "texto": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "default": "mensaje"
+    },
+    "room": {
+      "via": "chats",
+      "model": "rooms"
+    }
+  }
+}
