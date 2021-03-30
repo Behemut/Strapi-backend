@@ -576,6 +576,18 @@
                     "type": "string"
                   }
                 },
+                "consultas_paciente": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "consultas_doctor": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },

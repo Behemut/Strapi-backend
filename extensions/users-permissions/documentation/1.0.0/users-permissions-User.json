@@ -1291,6 +1291,92 @@
                 }
               }
             }
+          },
+          "consultas_paciente": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "fecha_cita",
+                "descripcion",
+                "horas"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "paciente": {
+                  "type": "string"
+                },
+                "fecha_cita": {
+                  "type": "string"
+                },
+                "doctor": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "estado": {
+                  "type": "boolean"
+                },
+                "horas": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "consultas_doctor": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "fecha_cita",
+                "descripcion",
+                "horas"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "paciente": {
+                  "type": "string"
+                },
+                "fecha_cita": {
+                  "type": "string"
+                },
+                "doctor": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "estado": {
+                  "type": "boolean"
+                },
+                "horas": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1344,6 +1430,18 @@
             "default": false
           },
           "rooms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "consultas_paciente": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "consultas_doctor": {
             "type": "array",
             "items": {
               "type": "string"

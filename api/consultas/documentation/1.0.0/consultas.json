@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/rooms": {
+    "/consultas": {
       "get": {
         "deprecated": false,
-        "description": "Find all the rooms's records",
+        "description": "Find all the consultas's records",
         "responses": {
           "200": {
-            "description": "Retrieve rooms document(s)",
+            "description": "Retrieve consultas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Rooms"
+                    "$ref": "#/components/schemas/Consultas"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Rooms"
+          "Consultas"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new rooms record",
+        "description": "Create a new consultas record",
         "responses": {
           "200": {
-            "description": "Retrieve rooms document(s)",
+            "description": "Retrieve consultas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rooms"
+                  "$ref": "#/components/schemas/Consultas"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Rooms"
+          "Consultas"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRooms"
+                "$ref": "#/components/schemas/NewConsultas"
               }
             }
           }
         }
       }
     },
-    "/rooms/count": {
+    "/consultas/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of rooms documents",
+        "description": "Retrieve the numver of consultas documents",
         "responses": {
           "200": {
-            "description": "Retrieve rooms document(s)",
+            "description": "Retrieve consultas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Rooms"
+          "Consultas"
         ],
         "parameters": []
       }
     },
-    "/rooms/{id}": {
+    "/consultas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one rooms record",
+        "description": "Find one consultas record",
         "responses": {
           "200": {
-            "description": "Retrieve rooms document(s)",
+            "description": "Retrieve consultas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rooms"
+                  "$ref": "#/components/schemas/Consultas"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Rooms"
+          "Consultas"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single rooms record",
+        "description": "Update a single consultas record",
         "responses": {
           "200": {
-            "description": "Retrieve rooms document(s)",
+            "description": "Retrieve consultas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rooms"
+                  "$ref": "#/components/schemas/Consultas"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Rooms"
+          "Consultas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRooms"
+                "$ref": "#/components/schemas/NewConsultas"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single rooms record",
+        "description": "Delete a single consultas record",
         "responses": {
           "200": {
-            "description": "deletes a single rooms based on the ID supplied",
+            "description": "deletes a single consultas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Rooms"
+          "Consultas"
         ],
         "parameters": [
           {
@@ -514,136 +514,211 @@
   },
   "components": {
     "schemas": {
-      "Rooms": {
+      "Consultas": {
         "required": [
-          "id"
+          "id",
+          "fecha_cita",
+          "descripcion",
+          "horas"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "chats": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "texto"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "from": {
-                  "type": "string"
-                },
-                "to": {
-                  "type": "string"
-                },
-                "texto": {
-                  "type": "string"
-                },
-                "room": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "paciente": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "rol": {
+                "type": "string"
+              },
+              "Nombre": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "rooms": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "consultas_paciente": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "consultas_doctor": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "miembros": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmationToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "rol": {
-                  "type": "string"
-                },
-                "Nombre": {
-                  "type": "string"
-                },
-                "estado": {
-                  "type": "boolean"
-                },
-                "rooms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "consultas_paciente": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "consultas_doctor": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "fecha_cita": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "doctor": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "rol": {
+                "type": "string"
+              },
+              "Nombre": {
+                "type": "string"
+              },
+              "estado": {
+                "type": "boolean"
+              },
+              "rooms": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "consultas_paciente": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "consultas_doctor": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "estado": {
+            "type": "boolean",
+            "default": false
+          },
+          "horas": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewRooms": {
+      "NewConsultas": {
+        "required": [
+          "fecha_cita",
+          "descripcion",
+          "horas"
+        ],
         "properties": {
-          "chats": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "paciente": {
+            "type": "string"
           },
-          "miembros": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "fecha_cita": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "doctor": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "estado": {
+            "type": "boolean",
+            "default": false
+          },
+          "horas": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -657,7 +732,7 @@
   },
   "tags": [
     {
-      "name": "Rooms"
+      "name": "Consultas"
     }
   ]
 }

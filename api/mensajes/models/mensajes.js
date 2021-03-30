@@ -5,4 +5,12 @@
  * to customize this model
  */
 
-module.exports = {};
+ module.exports = {
+    lifecycles: {
+        afterCreate: async (result, data) => {
+            // after create registry from strapi admin
+           
+            return (data)
+        }
+  }
+}

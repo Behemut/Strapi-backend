@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consultas",
+  "info": {
+    "name": "Consultas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "paciente": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "consultas_paciente"
+    },
+    "fecha_cita": {
+      "type": "datetime",
+      "required": true
+    },
+    "doctor": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "consultas_doctor"
+    },
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "boolean",
+      "default": false
+    },
+    "horas": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -72,6 +72,14 @@
     "rooms": {
       "via": "miembros",
       "collection": "rooms"
+    },
+    "consultas_paciente": {
+      "via": "paciente",
+      "collection": "consultas"
+    },
+    "consultas_doctor": {
+      "via": "doctor",
+      "collection": "consultas"
     }
   }
 }
