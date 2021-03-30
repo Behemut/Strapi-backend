@@ -16,9 +16,9 @@
       "via": "room"
     },
     "miembros": {
+      "via": "rooms",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "rooms",
       "dominant": true
     }
   }

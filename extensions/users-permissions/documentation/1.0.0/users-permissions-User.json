@@ -1252,7 +1252,8 @@
             }
           },
           "rol": {
-            "type": "string"
+            "type": "string",
+            "default": "Paciente"
           },
           "Nombre": {
             "type": "string"
@@ -1420,7 +1421,8 @@
             "type": "string"
           },
           "rol": {
-            "type": "string"
+            "type": "string",
+            "default": "Paciente"
           },
           "Nombre": {
             "type": "string"

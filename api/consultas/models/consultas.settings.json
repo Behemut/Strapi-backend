@@ -12,18 +12,18 @@
   },
   "attributes": {
     "paciente": {
+      "via": "consultas_paciente",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "consultas_paciente"
+      "model": "user"
     },
     "fecha_cita": {
       "type": "datetime",
       "required": true
     },
     "doctor": {
+      "via": "consultas_doctor",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "consultas_doctor"
+      "model": "user"
     },
     "descripcion": {
       "type": "string",

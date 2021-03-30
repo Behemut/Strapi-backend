@@ -60,7 +60,8 @@
       "configurable": false
     },
     "rol": {
-      "type": "string"
+      "type": "string",
+      "default": "Paciente"
     },
     "Nombre": {
       "type": "string"
@@ -70,16 +71,16 @@
       "default": false
     },
     "rooms": {
-      "via": "miembros",
-      "collection": "rooms"
+      "collection": "rooms",
+      "via": "miembros"
     },
     "consultas_paciente": {
-      "via": "paciente",
-      "collection": "consultas"
+      "collection": "consultas",
+      "via": "paciente"
     },
     "consultas_doctor": {
-      "via": "doctor",
-      "collection": "consultas"
+      "collection": "consultas",
+      "via": "doctor"
     }
   }
 }
